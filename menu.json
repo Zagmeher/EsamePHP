@@ -1,0 +1,16 @@
+{
+    "menu": [
+        {
+            "label": "Home",
+            "link": "home.php"
+        },
+        {
+            "label": "Chi sono",
+            "link": "chi_sono.php"
+        },
+        {
+            "label": "Servizi Offerti",
+            "link": "servizi_offerti.php"
+        }
+    ]
+}

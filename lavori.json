@@ -1,0 +1,43 @@
+[
+  {
+    "titolo": "Ingegnere delle Emozioni Digitali",
+    "descrizione": "Progetta esperienze utente in grado di evocare emozioni specifiche usando UI e feedback sensoriali."
+  },
+  {
+    "titolo": "Agronomo Verticale Urbano",
+    "descrizione": "Si occupa della gestione di coltivazioni verticali in ambienti urbani ad alta tecnologia."
+  },
+  {
+    "titolo": "Curatore di Archivi Virtuali Storici",
+    "descrizione": "Organizza e conserva documenti storici in ambienti di realtà virtuale accessibili online."
+  },
+  {
+    "titolo": "Eticista per Intelligenze Artificiali",
+    "descrizione": "Analizza e definisce comportamenti etici da integrare nei sistemi intelligenti."
+  },
+  {
+    "titolo": "Cartografo del Metaverso",
+    "descrizione": "Mappa spazi virtuali tridimensionali e interattivi per esperienze nel metaverso."
+  },
+  {
+    "titolo": "Coach di Benessere Digitale",
+    "descrizione": "Guida le persone nel bilanciare tecnologia e vita quotidiana per migliorare la salute mentale.",
+    "url": "CBD.php"
+  },
+  {
+    "titolo": "Ingegnere Sonoro Ambientale",
+    "descrizione": "Progetta paesaggi sonori su misura per ambienti pubblici, aziende o applicazioni terapeutiche."
+  },
+  {
+    "titolo": "Narratore Interattivo Multicanale",
+    "descrizione": "Crea storie che si sviluppano su più piattaforme e reagiscono alle scelte del pubblico."
+  },
+  {
+    "titolo": "Consulente per Avatar Digitali",
+    "descrizione": "Aiuta utenti e aziende a progettare avatar realistici e coerenti con la propria immagine."
+  },
+  {
+    "titolo": "Sviluppatore di Realtà Aumentata Educativa",
+    "descrizione": "Crea contenuti didattici immersivi tramite AR per scuole e corsi online."
+  }
+]

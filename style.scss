@@ -1,0 +1,528 @@
+// Variabili per i colori principali
+$primary-color: #4CAF50; // Green
+$secondary-color: #8BC34A; // Light Green
+$background-color: #F1F8E9; // Light Beige
+$text-color: #1c5467;
+$success-color: #008000; // Green
+$red: #FF0000; // Red
+// Definizione dei parametri per le sfumature
+$num-sfumature: 10; // Numero di sfumature da creare
+$green-dark: #004d00; // Verde scuro iniziale
+$green-light: #99ff99; // Verde chiaro finale
+$sfumatura-height: 10%; // Altezza di ogni sfumatura
+$spacing: 20px; // Spaziatura tra gli elementi
+
+
+// Impostazione fluida dei contenuti per mobile
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+@media (max-width: $breakpoint-mobile) {
+    .contatti {
+        margin: 20px;
+        padding: 15px;
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+// Mixin per margine inferiore
+@mixin margin-bottom-spacing {
+    margin-bottom: 20px;
+}
+
+// Variabili per i breakpoint
+$breakpoint-mobile: 768px; // Mobile breakpoint
+
+
+
+// Sfondo del body
+body {
+    height: 110vh;
+    background: linear-gradient(to bottom, #004080, #80d0ff);
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $text-color;
+}
+
+
+
+// Stile dell'header
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 100px;
+    position: relative;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        }
+
+    h1 {
+        margin: 0;
+        font-size: 50px;
+        color: white;
+
+    }
+    
+    nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin: 0 15px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+// Impostazione fluida dei contenuti per mobile
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// Stile del footer
+footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: fixed; // Fissa il footer
+    bottom: 15px; // Posiziona il footer a 15px dal bordo inferiore
+    left: 50px; // Distanza di 50px dal bordo sinistro
+    right: 50px; // Distanza di 50px dal bordo destro
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; // Centra il footer orizzontalmente
+    width: calc(100% - 100px); // Considera il padding laterale di 50px per lato
+
+    p {
+        margin: 0 auto;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 0 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Media query per dispositivi mobili e tablet
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+// Stile della pagina Contatti
+.contatti {
+    background-color: rgb(140, 190, 144);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    // Responsive margin e width
+    margin: 100px auto;
+    max-width: 900px;
+    width: 90%;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin: 50px auto;
+        width: 85%;
+        padding: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 20px auto;
+        width: 95%;
+        padding: 10px;
+    }
+    
+    h2 {
+        color: $text-color;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.5rem;
+        }
+    }
+    
+    form {
+        max-width: 700px; // Reso più stretto
+        margin: 0 auto;
+        
+        div {
+            margin-bottom: 20px;
+            
+            &:first-child {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                > div {
+                    width: 48%;
+                    
+                    @media (max-width: $breakpoint-mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: ($primary-color, 10%);
+            font-weight: bold;
+        }
+         
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid ($primary-color, 30%);
+            border-radius: 8px;
+            font-family: inherit;
+            
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+                box-shadow: 0 0 5px rgba($primary-color, 0.5);
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                padding: 8px;
+            }
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: $primary-color;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            font-weight: bold;
+            // Adds a smooth transition effect when the button's background color changes on hover
+            transition: background-color 0.3s ease;
+            
+            &:hover {
+                background-color: ($primary-color, 10%);
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .success-message, .error-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .success-message {
+        color: green;
+    }
+    
+    .error-message {
+        color: red;
+    }
+
+    div[class^="error"] {
+        color: red;
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+}
+
+//Stile del Chi sono
+.chi-sono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    max-width: 900px;
+    width: 90%;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 20px auto;
+        width: 95%;
+        padding: 10px;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+
+        @media (max-width: $breakpoint-tablet) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .text {
+        text-align: left;
+
+        h1 {
+            font-size: 3rem;
+            color: $text-color;
+            margin-bottom: 15px;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $text-color;
+            line-height: 1.5;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+// Stile della pagina Chi Sono - Sezione Lavori
+.lavori {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 100px auto;
+    max-width: 1200px;
+    width: 90%;
+    background-color: $background-color;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    position: relative; // Ensure proper positioning
+    min-height: calc(100vh - 200px); // Keeps the container away from the footer
+
+    @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 30px auto;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .lavoro-item {
+        background-color: $primary-color;
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            background-color: ($primary-color, 5%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            width: 2px;
+            background: $secondary-color;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: $secondary-color;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                background-color: ($secondary-color, 10%);
+                transform: scale(1.05);
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+// Stile della pagina CBD
+.CBD {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    max-width: 900px;
+    width: 90%;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 20px auto;
+        width: 95%;
+        padding: 10px;
+    }
+}

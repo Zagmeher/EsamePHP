@@ -1,0 +1,452 @@
+@media (max-width: 768px) {
+  .contatti {
+    margin: 20px;
+    padding: 15px;
+    width: 90%;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body {
+  height: 110vh;
+  background: linear-gradient(to bottom, #004080, #80d0ff);
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #1c5467;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 100px;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+header h1 {
+  margin: 0;
+  font-size: 50px;
+  color: white;
+}
+header nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav li {
+  margin: 0 15px;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: fixed;
+  bottom: 15px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: calc(100% - 100px);
+}
+footer p {
+  margin: 0 auto;
+  font-size: 0.9rem;
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  footer p {
+    margin-bottom: 15px;
+  }
+  footer ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer ul li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul li {
+    margin: 10px 0;
+  }
+}
+
+.contatti {
+  background-color: rgb(140, 190, 144);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 100px auto;
+  max-width: 900px;
+  width: 90%;
+}
+@media (max-width: 1024px) {
+  .contatti {
+    margin: 50px auto;
+    width: 85%;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .contatti {
+    margin: 20px auto;
+    width: 95%;
+    padding: 10px;
+  }
+}
+.contatti h2 {
+  color: #1c5467;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .contatti h2 {
+    font-size: 1.5rem;
+  }
+}
+.contatti form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.contatti form div {
+  margin-bottom: 20px;
+}
+.contatti form div:first-child {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contatti form div:first-child > div {
+  width: 48%;
+}
+@media (max-width: 768px) {
+  .contatti form div:first-child > div {
+    width: 100%;
+  }
+}
+.contatti form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4CAF50, 10%;
+  font-weight: bold;
+}
+.contatti form input, .contatti form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4CAF50, 30%;
+  border-radius: 8px;
+  font-family: inherit;
+}
+.contatti form input:focus, .contatti form textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+@media (max-width: 768px) {
+  .contatti form input, .contatti form textarea {
+    padding: 8px;
+  }
+}
+.contatti form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contatti form button {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.contatti form button:hover {
+  background-color: #4CAF50, 10%;
+}
+@media (max-width: 768px) {
+  .contatti form button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+.contatti .success-message, .contatti .error-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .contatti .success-message, .contatti .error-message {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+.contatti .success-message {
+  color: green;
+}
+.contatti .error-message {
+  color: red;
+}
+.contatti div[class^=error] {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.chi-sono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  max-width: 900px;
+  width: 90%;
+  background-color: #F1F8E9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1024px) {
+  .chi-sono {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .chi-sono {
+    margin: 20px auto;
+    width: 95%;
+    padding: 10px;
+  }
+}
+.chi-sono img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+@media (max-width: 1024px) {
+  .chi-sono img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.chi-sono .text {
+  text-align: left;
+}
+.chi-sono .text h1 {
+  font-size: 3rem;
+  color: #1c5467;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .chi-sono .text h1 {
+    font-size: 1.5rem;
+  }
+}
+.chi-sono .text p {
+  font-size: 1.2rem;
+  color: #1c5467;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .chi-sono .text p {
+    font-size: 0.9rem;
+  }
+}
+
+.lavori {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 100px auto;
+  max-width: 1200px;
+  width: 90%;
+  background-color: #F1F8E9;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: calc(100vh - 200px);
+}
+@media (max-width: 1024px) {
+  .lavori {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .lavori {
+    margin: 30px auto;
+    width: 95%;
+    padding: 15px;
+  }
+}
+.lavori .lavoro-item {
+  background-color: #4CAF50;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.lavori .lavoro-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #4CAF50, 5%;
+}
+.lavori .lavoro-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -15px;
+  width: 2px;
+  background: #8BC34A;
+}
+.lavori .lavoro-item:last-child::after {
+  display: none;
+}
+.lavori .lavoro-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .lavori .lavoro-item h3 {
+    font-size: 1.4rem;
+  }
+}
+.lavori .lavoro-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .lavori .lavoro-item p {
+    font-size: 1rem;
+  }
+}
+.lavori .lavoro-item a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #8BC34A;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.lavori .lavoro-item a:hover {
+  background-color: #8BC34A, 10%;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .lavori .lavoro-item a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.CBD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  max-width: 900px;
+  width: 90%;
+  background-color: #F1F8E9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1024px) {
+  .CBD {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .CBD {
+    margin: 20px auto;
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
