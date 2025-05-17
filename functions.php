@@ -23,4 +23,26 @@ function impjson($filePath) {
 
     }
 }
+
+function imp_dett($filePath) {
+    // Leggi il contenuto del file
+    $contenuto = file_get_contents($filePath);
+
+    // Decodifica il JSON in un array associativo
+    $dati = json_decode($contenuto, true);
+
+    // Verifica se la decodifica ha avuto successo
+    if ($dati) {
+        
+        echo "<ul>";
+        echo "<h3>" . htmlspecialchars($dati['title']) . "</h3>";
+        echo "<li>Cliente: " . htmlspecialchars($dati['client']) . "</li>";
+        echo "<li>Data: " . htmlspecialchars($dati['date']) . "</li>";
+        echo "</ul>";
+        echo "<img src='" . htmlspecialchars($dati['image']) . "' alt='Immagine prodotto' style='max-width: 300px;'>";
+    } else {
+        echo "Errore nella lettura del file JSON.";
+    }
+}
+
 ?>

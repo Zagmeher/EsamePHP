@@ -505,8 +505,9 @@ footer {
 // Stile della pagina CBD
 .CBD {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row; // 🔁 Testo a sinistra, immagine a destra
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 100px auto;
     max-width: 900px;
     width: 90%;
@@ -514,9 +515,11 @@ footer {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 30px;
 
     @media (max-width: $breakpoint-tablet) {
-        flex-direction: column;
+        flex-direction: column; // 📱 Imposta in colonna nei tablet
+        align-items: center;
         padding: 15px;
     }
 
@@ -524,5 +527,41 @@ footer {
         margin: 20px auto;
         width: 95%;
         padding: 10px;
+    }
+
+    .text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: auto; // Sposta il testo verso il bordo sinistro
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                color: $text-color;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    img {
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        margin-left: auto; // Sposta l'immagine verso il bordo destro
+
+        @media (max-width: $breakpoint-tablet) {
+            margin-top: 20px;
+            width: 100%;
+        }
     }
 }

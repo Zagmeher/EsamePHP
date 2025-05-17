@@ -425,8 +425,9 @@ footer a:hover {
 
 .CBD {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 100px auto;
   max-width: 900px;
   width: 90%;
@@ -434,10 +435,12 @@ footer a:hover {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 30px;
 }
 @media (max-width: 1024px) {
   .CBD {
     flex-direction: column;
+    align-items: center;
     padding: 15px;
   }
 }
@@ -446,6 +449,40 @@ footer a:hover {
     margin: 20px auto;
     width: 95%;
     padding: 10px;
+  }
+}
+.CBD .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: auto;
+}
+.CBD .text ul {
+  list-style: none;
+  padding: 0;
+}
+.CBD .text ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #1c5467;
+}
+@media (max-width: 768px) {
+  .CBD .text ul li {
+    font-size: 1rem;
+  }
+}
+.CBD img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-left: auto;
+}
+@media (max-width: 1024px) {
+  .CBD img {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 

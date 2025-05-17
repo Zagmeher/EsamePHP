@@ -9,8 +9,8 @@
     <body class="sfumature-container">
         <?php include 'header.php'; ?>
         <div class = "CBD" >
-            <h1> Coach Benessere Digitale </h1>
-            <p>Il Coach di Benessere Digitale aiuta le persone a sviluppare abitudini sane nell'uso della tecnologia, promuovendo un equilibrio tra vita digitale e reale.</p>
+            <?php include 'functions.php'; // Include il file delle funzioni
+            imp_dett('dettCBD.json'); // Include il file JSON ?>
         </div>
         <?php include 'footer.php'; ?>
     </body>
