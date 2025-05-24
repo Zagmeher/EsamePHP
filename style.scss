@@ -1,0 +1,846 @@
+// Variabili per i colori principali
+$primary-color: #4CAF50; // Green
+$text-color: purple;
+$secondary-color: #8BC34A; // Light Green
+$background-color: #F1F8E9; // Light Beige
+$text-color: #1c5467;
+$success-color: #008000; // Green
+$red: #FF0000; // Red
+// Definizione dei parametri per le sfumature
+$num-sfumature: 10; // Numero di sfumature da creare
+$green-dark: #004d00; // Verde scuro iniziale
+$green-light: #99ff99; // Verde chiaro finale
+$sfumatura-height: 10%; // Altezza di ogni sfumatura
+$spacing: 20px; // Spaziatura tra gli elementi
+
+
+// Impostazione fluida dei contenuti per mobile
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+@media (max-width: $breakpoint-mobile) {
+    .contatti {
+        font-size: 25px;
+        margin: 20px;
+        padding: 15px;
+        width: 90%;
+    }
+
+    footer {
+        position: static;
+        margin-top: auto;
+        text-align: center;
+        padding: 15px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+// Mixin per margine inferiore
+@mixin margin-bottom-spacing {
+    margin-bottom: 20px; 
+}
+
+// Variabili per i breakpoint
+$breakpoint-mobile: 768px; // Mobile breakpoint
+
+
+
+// Sfondo del body
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #004080, #80d0ff);
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakpoint-tablet) {
+        background: linear-gradient(to bottom, #00509e, #a3d8ff);
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        background: linear-gradient(to bottom, #0066cc, #cceeff);
+    }
+}
+
+
+
+// Stile dell'header
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 50px auto;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 1200px;
+    width: 90%;
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 15px;
+        margin: 50px auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 90px;
+            height: 90px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 45px;
+        color: white;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 50px;
+        }
+    }
+
+    nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: $breakpoint-tablet) {
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            @media (max-width: $breakpoint-mobile) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        li {
+            margin: 0 25px;
+
+            @media (max-width: $breakpoint-tablet) {
+                margin: 0 15px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                margin: 15px 0;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 25px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+// Stile del footer
+footer {
+    font-size: 24px;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: static; // Cambiato da fixed a static
+    bottom: auto; // Rimosso il posizionamento fisso
+    left: 0;
+    width: 100%; // Occupa tutta la larghezza
+    margin-top: auto; // Spinge il footer in fondo alla pagina
+    box-sizing: border-box; // Include padding e bordo nella larghezza totale
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 0 auto;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0 10px;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 0 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            flex-direction: row;
+            justify-content: center;
+
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        padding: 10px;
+
+        p {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin: 5px 0;
+            }
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+}
+
+// Stile della pagina Contatti
+.contatti {
+    background-color: rgb(140, 190, 144);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 100px auto;
+    max-width: 900px;
+    width: 90%;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin: 50px auto;
+        width: 85%;
+        padding: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 20px auto;
+        width: 95%;
+        padding: 10px;
+    }
+
+    h2 {
+        color: brown;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.5rem;
+        }
+    }
+
+    form {
+        max-width: 700px;
+        margin: auto;
+
+        div {
+            margin-bottom: 20px;
+
+            &:first-child {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                 div {
+                    width: 48%;
+
+                    @media (max-width: $breakpoint-mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+            font-weight: bold;
+
+            @media (max-width: $breakpoint-tablet) {
+            font-size: 0.9rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+            font-size: 0.8rem;
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            max-width: 100%; // Impedisce che escano dalla finestra
+            padding: 10px;
+            border: 1px solid rgba($primary-color, 0.3);
+            border-radius: 8px;
+            font-family: inherit;
+            box-sizing: border-box; // Include padding e bordo nella larghezza totale
+
+            &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+            padding: 8px;
+            }
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+            background-color: $primary-color, 10%;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            }
+        }
+
+        .cf {
+            color: black;
+            font-weight: bold;
+        }
+
+        .input{
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+
+
+            @media (max-width: $breakpoint-tablet) {
+                max-width: 300px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .button1 {
+            display: flex;
+            justify-content: center; // Centra orizzontalmente
+            align-items: center; // Centra verticalmente
+        
+            }
+        }
+
+        .formcontatti {
+            display: flex;
+            justify-content: center; // Centra orizzontalmente
+            align-items: center; // Centra verticalmente
+        }
+    }
+
+
+
+//Stile del Chi sono
+.chisono {
+    background-color: $background-color;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px auto; // Centra il container
+    max-width: 800px; // Limita la larghezza massima a schermo intero
+    width: 90%; // Adatta il container alla larghezza dello schermo
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 10px; // Riduce il margine per schermi piccoli
+        padding: 15px;
+    }
+
+    h2 {
+        color: $text-color;
+        text-align: center; // Titolo centrato
+        margin-bottom: 20px;
+        font-size: 2rem;
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: column; // Disposizione verticale per schermi piccoli
+        align-items: center;
+        gap: 20px;
+
+        .photo {
+            max-width: 200px; // Riduce la dimensione della foto
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .description {
+            text-align: center; // Testo centrato
+            font-size: 1rem;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .skills {
+        margin-top: 20px;
+
+        h3 {
+            color: $secondary-color;
+            text-align: center; // Titolo centrato
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.2rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; // Disposizione verticale
+            align-items: center; // Centra gli elementi
+
+            li {
+                background-color: $primary-color;
+                color: white;
+                padding: 10px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                font-size: 1rem;
+                text-align: center;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    .imgMe {
+        width: 300px;
+        height: auto;
+        border-radius: 100px; // Bordi leggermente arrotondati
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: inline-block; // Cambiato a inline-block per allineare con il testo
+        margin: 0 15px 15px 0; // Aggiunto margine per separare dal testo
+        vertical-align: middle; // Allinea verticalmente con il testo
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 200px; // Riduce la dimensione per schermi piccoli
+        }
+    }
+
+}
+
+// Stile Index
+.index {
+    margin: 100px auto;
+    max-width: 1200px;
+    width: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin: 50px auto;
+        width: 85%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    .principale {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #fotopers {
+            flex: 1 1 40%;
+            max-width: 400px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+
+            @media (max-width: $breakpoint-mobile) {
+                max-width: 200px;
+            }
+        }
+
+        .testo {
+            flex: 1 1 55%;
+            padding: 20px;
+            background-color: $background-color;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            @media (max-width: $breakpoint-mobile) {
+                padding: 10px;
+                text-align: center;
+            }
+
+            #chisono {
+                color: purple;
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 2rem;
+                }
+            }
+
+            #descrizione {
+                color: $text-color;
+                line-height: 1.8;
+                font-size: 1.2rem;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Stile per la pagina dei lavori
+.lavori {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    max-width: 800px;
+    margin: 20px auto;
+
+    p {
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        color: $text-color;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1rem;
+        }
+    }
+
+    a {
+        color: purple;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 10px 0;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+            color: $primary-color, 10%;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.2rem;
+        }
+    }
+}
+// Stile per la pagina dei servizi   
+.servoff {
+    text-align: center;
+    padding: 20px;
+    background-color: $background-color;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    width: 90%;
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        color: $primary-color;
+        font-size: 2rem;
+        margin-bottom: 20px;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .imgServ {
+        max-width: 40%;
+        height: auto;
+        border-radius: 15px;
+        margin-right: 20px;
+        float: left;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: $breakpoint-tablet) {
+            max-width: 50%;
+            margin-right: 15px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            float: none;
+            margin: 0 auto 15px;
+            display: block;
+            max-width: 70%;
+        }
+    }
+
+    .descServ {
+        background-color: $secondary-color;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+
+        @media (max-width: $breakpoint-tablet) {
+            padding: 12px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px;
+        }
+
+        h3 {
+            color: purple;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.3rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.1rem;
+            }
+        }
+
+        p {
+            color: $text-color;
+            font-size: 1rem;
+            line-height: 1.6;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+
+// Stile per la pagina dinamica di dettaglio
+.dettaglio {
+    margin: 20px auto;
+    max-width: 800px;
+    width: 90%;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 15px;
+        width: 85%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .servizio {
+        text-align: center;
+
+        &__titolo {
+            font-size: 25px;
+            color: purple;
+            margin-bottom: 15px;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 25px;
+            }
+        }
+
+        &__descrizione {
+            font-size: 25px;
+            color: $text-color;
+            margin-bottom: 10px;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 25px;
+            }
+        }
+
+        &__prezzo {
+            font-size: 25px;
+            font-weight: bold;
+            color: gold;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 25px;
+            }
+        }
+    }
+
+    img {
+        display: block;
+        margin: 20px auto;
+        max-width: 550px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: $breakpoint-mobile) {
+            max-width: 150px;
+            margin: 10px auto;
+        }
+    }
+}
+
+// Stile per i messaggi di errore
+.errore {
+    color: red;
+
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 18px;
+        padding: 10px;
+        width: 95%;
+    }
+}

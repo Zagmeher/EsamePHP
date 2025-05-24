@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "titolo": "Ingegnere delle Emozioni Digitali",
+    "descrizione": "Progetta esperienze utente in grado di evocare emozioni specifiche usando UI e feedback sensoriali."
+  },
+  {
+    "id": 2,
+    "titolo": "Agronomo Verticale Urbano",
+    "descrizione": "Si occupa della gestione di coltivazioni verticali in ambienti urbani ad alta tecnologia."
+  },
+  {
+    "id": 3,
+    "titolo": "Curatore di Archivi Virtuali Storici",
+    "descrizione": "Organizza e conserva documenti storici in ambienti di realtà virtuale accessibili online."
+  },
+  {
+    "id": 4,
+    "titolo": "Eticista per Intelligenze Artificiali",
+    "descrizione": "Analizza e definisce comportamenti etici da integrare nei sistemi intelligenti."
+  },
+  {
+    "id": 5,
+    "titolo": "Cartografo del Metaverso",
+    "descrizione": "Mappa spazi virtuali tridimensionali e interattivi per esperienze nel metaverso."
+  },
+  {
+    "id": 6,
+    "titolo": "Coach di Benessere Digitale",
+    "descrizione": "Guida le persone nel bilanciare tecnologia e vita quotidiana per migliorare la salute mentale."
+  },
+  {
+    "id": 7,
+    "titolo": "Ingegnere Sonoro Ambientale",
+    "descrizione": "Progetta paesaggi sonori su misura per ambienti pubblici, aziende o applicazioni terapeutiche."
+  },
+  {
+    "id": 8,
+    "titolo": "Narratore Interattivo Multicanale",
+    "descrizione": "Crea storie che si sviluppano su più piattaforme e reagiscono alle scelte del pubblico."
+  },
+  {
+    "id": 9,
+    "titolo": "Consulente per Avatar Digitali",
+    "descrizione": "Aiuta utenti e aziende a progettare avatar realistici e coerenti con la propria immagine."
+  },
+  {
+    "id": 10,
+    "titolo": "Sviluppatore di Realtà Aumentata Educativa",
+    "descrizione": "Crea contenuti didattici immersivi tramite AR per scuole e corsi online."
+  }
+]

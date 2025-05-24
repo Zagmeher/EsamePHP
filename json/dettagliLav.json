@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "img": "./img/dettLav/consulenza.jpg",
+        "titolo": "Consulenza Informatica",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Offriamo supporto tecnico e strategico per ottimizzare i sistemi informatici aziendali.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 2,
+        "img": "./img/dettLav/sviluppo_web.jpg",
+        "titolo": "Sviluppo Web",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Realizziamo siti web personalizzati e ottimizzati per ogni esigenza.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 3,
+        "img": "./img/dettLav/social_media.png",
+        "titolo": "Gestione Social Media",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Creiamo e gestiamo contenuti per migliorare la presenza online della tua azienda.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 4,
+        "img": "./img/dettLav/assistenza_tecnica.jpg",
+        "titolo": "Assistenza Tecnica",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Forniamo supporto per la risoluzione di problemi hardware e software.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 5,
+        "img": "./img/dettLav/formazione.jpg",
+        "titolo": "Formazione IT",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Organizziamo corsi di formazione per migliorare le competenze digitali del tuo team.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 6,
+        "img": "./img/dettLav/ecommerce.png",
+        "titolo": "E-commerce",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Progettiamo e sviluppiamo piattaforme di vendita online su misura.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 7,
+        "img": "./img/dettLav/seomarketing.png",
+        "titolo": "SEO e Marketing Digitale",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Ottimizziamo il tuo sito per i motori di ricerca e creiamo campagne di marketing digitale.",
+        "data": "2023-10-01"
+    },
+    {
+        "id": 8,
+        "img": "./img/dettLav/cybersecurity.jpg",
+        "titolo": "Sicurezza Informatica",
+        "cliente": "Tech Solutions Inc.",
+        "descrizione": "Implementiamo soluzioni per proteggere i dati e i sistemi della tua azienda.",
+        "data": "2023-10-01"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "titolo": "Consulenza Informatica",
+        "descrizione": "Offriamo supporto tecnico e strategico per ottimizzare i sistemi informatici aziendali."
+    },
+    {
+        "id": 2,
+        "titolo": "Sviluppo Web",
+        "descrizione": "Realizziamo siti web personalizzati e ottimizzati per ogni esigenza."
+    },
+    {
+        "id": 3,
+        "titolo": "Gestione Social Media",
+        "descrizione": "Creiamo e gestiamo contenuti per migliorare la presenza online della tua azienda."
+    },
+    {
+        "id": 4,
+        "titolo": "Assistenza Tecnica",
+        "descrizione": "Forniamo supporto per la risoluzione di problemi hardware e software."
+    },
+    {
+        "id": 5,
+        "titolo": "Formazione IT",
+        "descrizione": "Organizziamo corsi di formazione per migliorare le competenze digitali del tuo team."
+    },
+    {
+        "id": 6,
+        "titolo": "E-commerce",
+        "descrizione": "Progettiamo e sviluppiamo piattaforme di vendita online su misura."
+    },
+    {
+        "id": 7,
+        "titolo": "SEO e Marketing Digitale",
+        "descrizione": "Ottimizziamo il tuo sito per i motori di ricerca e creiamo campagne di marketing digitale."
+    },
+    {
+        "id": 8,
+        "titolo": "Sicurezza Informatica",
+        "descrizione": "Implementiamo soluzioni per proteggere i dati e i sistemi della tua azienda."
+    }
+]
